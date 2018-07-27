@@ -1,0 +1,121 @@
+<!-- <wxs src="../../utils/filter.wxs" module="filter" />
+<view>
+{{filter.formatMoney('11111111')}}
+</view> -->
+<view>
+    <image src="https://static.yidap.com/miniapp/xiaolu-banner.png" style='width:100%;height:100%;' mode='widthFix'></image>
+    <!--介绍 S  -->
+    <view class="section-box">
+        <view class="section-item">
+            <image src="../../public/images/index/find_1.png"></image>
+            <view class="section-item-title fs35 bold-800">
+                <text class='fs36'>专</text>
+            </view>
+            <view>
+                <text class="text-666">数百名资深专业皮革辅料买手 </text>
+            </view>
+        </view>
+        <view class="section-item">
+            <image src="../../public/images/index/find_2.png"></image>
+            <view class="section-item-title fs35 bold-800">
+                <text class='fs36'>快</text>
+            </view>
+            <view style='width:220rpx'>
+                <text class="text-666">3分钟响应、3小时反馈、8小时内找到 </text>
+            </view>
+        </view>
+        <!-- <view class="section-item">
+            <image src="../../public/images/index/find_3.png"></image>
+            <view class="section-item-title fs35 bold-800">
+                <text class='fs36'>好</text>
+            </view>
+            <view>
+                <text class="text-666">与国内正规工厂合作,质量有保障</text>
+            </view>
+        </view>
+        <view class="section-item">
+            <image src="../../public/images/index/find_4.png"></image>
+            <view class="section-item-title fs35 bold-800">
+                <text class='fs36'>省</text>
+            </view>
+            <view>
+                <text class="text-666">平台大批量采购,省时省心更省钱</text>
+            </view>
+        </view> -->
+    </view>
+    <!--介绍 E  -->
+    <!-- <view class="now-btn">
+        截止当前
+    </view> -->
+    <view style='text-align:center'>
+      <image style='height:70rpx;margin:0 auto;margin-bottom:20rpx;' src='../../public/images/index/index_1.png'></image>
+    </view>
+    <view class="free-service flex space-around text-666 fs30">
+        <view>提供服务<text class="text-theme">{{serviceData.num_task||0}}</text> 次</view>
+        <view>提供服务<text class="text-theme">{{serviceData.num_people||0}}</text>人</view>
+    </view>
+    <view class='cf'>
+     
+      <view class="together-box">
+          <form bindsubmit="goFind" report-submit='true' >
+            <button formType="submit">立即找料</button>
+          </form>
+          
+      </view>
+      <view class="recharge-box">
+
+          <form bindsubmit="goMaterial" report-submit='true' >
+             <button formType="submit">立刻取送</button>
+          </form>
+         
+      </view>
+    </view>
+    
+    <view bindtap='contact' class="text-theme contact">
+        <text class="iconfont icon-dianhua"></text>
+        <text>小鹿客服：<text style='color:#1435ff;'>400-8088-156</text></text>
+    </view>
+</view>
+<!-- <dialog id='dialog' 
+      title='我是标题' 
+      content='恭喜你，学会了小程序组件' 
+      cancelText='知道了' 
+      confirm='谢谢你'
+      bind:cancelEvent="_cancelEvent"  
+      bind:confirmEvent="_confirmEvent">
+      <view>xxx</view>
+    </dialog> -->
+<view class='index-popup' wx:if="{{isPopup}}">
+    <view class='index-popup-bg' catchtap='closePopup'></view>
+    <view class='index-popup-content'>
+        <view class='index-popup-title'>请填写找料件数，选择找料方式</view>
+        <view class='index-popup-main'>
+            <view class='index-popup-view-1'>件数 ：</view> 
+            <view class='index-popup-view-2'>
+              <view class='sub' bindtap='sub'>-</view> 
+              <input class='findInput' bindinput='findNumChange' bindblur='findNumBlur' type='number' value='{{findNum}}'> </input> 
+              <view class='plu' bindtap='plu'>+</view>
+            </view>
+        </view>
+        <view class='index-popup-check'>
+          <view>找料方式 :</view>
+          <view bindtap='selcetTab' data-id="1">
+           <text hidden='{{selcetTabNum != 1}}' class="iconfont icon-dui fs40 text-theme"></text>
+           <text hidden='{{selcetTabNum == 1}}' class="iconfont icon-yuan fs40 text-eb"></text>
+            按图找料
+          </view>
+          <view bindtap='selcetTab' data-id="2">
+           <text hidden='{{selcetTabNum != 2}}' class="iconfont icon-dui fs40 text-theme"></text>
+           <text hidden='{{selcetTabNum == 2}}' class="iconfont icon-yuan fs40 text-eb"></text>
+            按样找料
+          </view>
+        </view>
+
+        <view class='doSubmit btn-shadow' catchtap='doSubmit'>
+          提交
+        </view> 
+    </view>
+</view>
+
+
+

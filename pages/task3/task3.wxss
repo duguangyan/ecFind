@@ -1,0 +1,143 @@
+.touch-item {
+ font-size: 14px;
+ display: flex;
+ justify-content: space-between;
+ width: 100%;
+ overflow: hidden;
+ margin-left: 10rpx;
+}
+.content {
+ width: 100%;
+ padding: 0 10rpx;
+ line-height: 22px;
+ margin-right:0;
+ -webkit-transition: all 0.4s;
+ transition: all 0.4s;
+ -webkit-transform: translateX(90px);
+ transform: translateX(90px);
+ margin-left: -90px;
+ position: relative;
+}
+.del {
+ background-color: #d5393c;
+ width: 90px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ color: #fff;
+ -webkit-transform: translateX(90px);
+ transform: translateX(90px);
+ -webkit-transition: all 0.4s;
+ transition: all 0.4s;
+}
+.touch-move-active .content,
+.touch-move-active .del {
+ -webkit-transform: translateX(0);
+ transform: translateX(0);
+}
+.check-btn{
+  position: absolute;
+  width: 100rpx;
+  height: 100%;
+}
+.icon-dui-1,.icon-yuan-1{
+  position: absolute;
+  top: 25%;
+}
+.image-bg{
+  width:100rpx;
+  height:100rpx;
+  position:absolute;
+  right:30rpx;
+  top:6%;
+}
+.image-bg image{
+  width: 100%;
+  height: 100%;
+}
+.task-content{
+  margin-left: 15rpx;
+  border-bottom: 1rpx solid #eee; 
+  padding: 10rpx 0;
+  padding-left: 55rpx; 
+}
+.item-img{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 30rpx;
+  border-radius:10rpx; 
+}
+.task-pay{
+  width: 710rpx;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  overflow: hidden;
+  height: 115rpx;
+  line-height: 115rpx;
+  background-color:#f8f8f8; 
+}
+.task-pay-btn{
+  width: 200rpx;
+  display: inline-block;
+  background-color: #c81a29;
+  text-align: center;
+  color: #fff;
+  float: right;
+  height: 115rpx;
+  line-height: 115rpx;
+}
+.task-pay-btn-default{
+  width: 200rpx;
+  display: inline-block;
+  background-color: #999;
+  text-align: center;
+  color: #fff;
+  float: right;
+  font-size: 36rpx;
+}
+.no-data{
+  margin: 0 auto;
+  text-align: center
+}
+.no-data image{
+  width: 100rpx;
+  height: 140rpx;
+  margin-top: 200rpx;
+}
+.no-data-text{
+  text-align: center;
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  font-size: #333;
+}
+.no-data-btn{
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #c81a29;
+  border-radius:10rpx; 
+  font-size: 36rpx;
+  margin: 0 auto;
+  margin-top: 50rpx;
+}
+.task-content-le{
+  letter-spacing:10rpx;
+}
+.check-edit{
+  position:absolute;
+  right:0;
+  top:0;
+  color:#1435ff;
+  width:120rpx;
+  height:100%;
+  z-index: 9999;
+}
+.check-edit text{
+  position:absolute;
+  right:50rpx;
+  top:25%;
+}

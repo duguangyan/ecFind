@@ -1,0 +1,87 @@
+
+<view class="section-avatar flex flex-start">
+    <image  hidden='{{!memberInfo}}'  class='center-setting'
+    src='../../public/images/icon/center-setting-icon.png' bindtap='gotoSettinngPage'>
+    </image>
+    <image class='header-bg' src='../../public/images/center/header_bg.png'></image>
+    <view class="avatar">
+        <image class=' btn-shadow' 
+        src="{{memberInfo.avatar_path || '../../public/images/center/default_avatar.png'}}">
+        </image>
+    </view>
+
+    <view class="member-info text-left bold {{memberInfo? 'top_30' : ''}}">
+        <view class='center-top-txt' wx:if="{{memberInfo}}">
+            <view class="fs26 bold ">
+                <text class="fs30 bold-600">{{memberInfo.user_name}}</text>
+                <text hidden="{{true}}" bindtap='modifyInfo' class="iconfont icon-shouhuodizhiyebianji bold-600 fs34 pd-20"></text>
+            </view>
+            <view class="mgt-10">
+                <image class='center-money' src='../../public/images/center/money.png'></image>
+                <text class="text-yellow mgl-20 fs26">余额：￥ {{memberInfo.asset.balance_amount || 0}}</text>
+            </view>
+        </view>
+        <!-- <navigator wx:if='{{!loginTime}}' style="padding:20rpx 0" open-type='navigate' url="" hidden='{{memberInfo}}' class="fs32 bold">
+            您暂未登录（点击登录）
+        </navigator>
+        open-type='navigate' url="../login/login"
+         -->
+        <view style="padding:20rpx 0"  
+        bindtap='toLogin'  
+        hidden='{{memberInfo}}' 
+        class="fs32 bold">
+            您暂未登录（点击登录）
+        </view>
+    </view>
+
+    <view wx:if="{{memberInfo}}" class="setting bg-red text-center mgr-20 radius-10">
+        <navigator open-type='navigate' url="../recharge/recharge">
+            <text class='text-fff fs30'>充值</text>
+        </navigator>
+    </view>
+</view>
+
+<view class="section-order mgt-20">
+    <view class="my-order-line flex">
+        <view class="fs30">找料订单</view>
+        <view bindtap='toMyOrder' data-method='1' data-id="0" hover-class='hover-click' class="text-999 lh80">
+            <text>查看全部订单</text>
+            <text class="iconfont icon-jiantou1 "></text>
+        </view>
+    </view>
+    <view class="flex flex-start">
+        <view bindtap='toMyOrder' data-method='1' data-id="{{item.id}}" class="item" wx:for="{{orderTab1}}" wx:key="{{i}}">
+            <image mode='aspectFit' src='../../public/images/center/{{item.imgId}}.png'></image>
+            <text>{{item.name}}</text>
+            <text class='center-num' wx:if='{{item.num}}'>{{item.num || 0}}</text>
+        </view>
+    </view>
+</view>
+
+<view class="section-order mgt-20">
+    <view class="my-order-line flex">
+        <view class="fs30">取送订单</view>
+        <view bindtap='toMyOrder' data-method='2' data-id="0" hover-class='hover-click' class="text-999 lh80">
+            <text>查看全部订单</text>
+            <text class="iconfont icon-jiantou1 "></text>
+        </view>
+    </view>
+    <view class="flex flex-start">
+        <view bindtap='toMyOrder' data-method='2' data-id="{{item.id}}" class="item" wx:for="{{orderTab2}}" wx:key="{{i}}">
+            <image mode='aspectFit' src='../../public/images/center/{{item.imgId}}.png'></image>
+            <text>{{item.name}}</text>
+            <text class='center-num text-red' wx:if='{{item.num}}'>{{item.num || 0}}</text>
+        </view>
+    </view>
+</view>
+
+<view class="navigator-box section-order mgt-20" bindtap='goAddress'>
+  <block class='navigator'>
+      <view class="navigator-text fs30 pdl-30">我的地址</view>
+      <view class="navigator-arrow"></view>
+  </block>
+</view>
+
+
+
+

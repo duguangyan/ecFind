@@ -1,0 +1,19 @@
+<!--pages/taskPaySuccess/taskPaySuccess.wxml-->
+<wxs src="../../utils/filter.wxs" module="filter" />
+<view class='task-success'>
+  <view class='task-success-top'>
+      <text class='iconfont icon-tijiaochenggong'></text>
+      <view class='task-success-msg'>
+          <view class='fs48'>支付成功</view>
+          <view class='fs24'>{{time}}</view>
+      </view>
+  </view>
+  <view class='border-b20 lh120' style=''></view>
+  <view class='lh120 pdl-30 fs30 bb-1'>
+      实付金额：<text class='text-red'>￥{{filter.formatMoney(value)}}</text> 
+  </view>
+  <view class='footer-btn'>
+      <view class='text-333' bindtap='goIndex'>返回个人中心</view>
+      <!-- <view class='text-666' bindtap='goFindOrderDetail'>查看订单详情</view> -->
+  </view>
+</view>

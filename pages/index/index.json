@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "小鹿快找",
+  "usingComponents": {
+    "dialog": "../../component/dialog/dialog"
+  }
+}

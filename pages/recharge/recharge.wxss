@@ -1,0 +1,35 @@
+.recharge-title{
+  background-color: #fff;
+}
+.recharge-list-li{
+  display: flex;
+  width: 230rpx;
+  height: 180rpx;
+  border:1rpx solid #c81a29;
+  float: left; 
+  border-radius:10rpx; 
+  margin-left: 12rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+.recharge-list-text{
+  justify-content: center;
+  display: block;
+  font-size: 36rpx;
+  line-height: 64rpx;
+  padding-left: 20rpx;
+}
+.recharge-explain{
+  padding: 30rpx;
+  font-size: 30rpx;
+}
+.recharge-explain view{
+  line-height: 60rpx;
+}
+.recharge{
+  background-color: #efeff4;
+}
+.position{
+  display: block;
+  height: 204rpx;
+}

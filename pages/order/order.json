@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "订单",
+  "usingComponents": {
+    "loading": "../../component/loading/loading",
+    "mainloading": "../../component/mainLoading/mainLoading",
+    "dialog": "../../component/dialog/dialog"
+  }
+  
+}

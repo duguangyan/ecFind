@@ -1,0 +1,74 @@
+<!--pages/material/material.wxml-->
+<wxs src="../../utils/filter.wxs" module="filter" />
+<view class='material'>
+    <view class='box-shadow'>
+        <view class='lh90 fs30 pdl-30 border-bottom'>
+          物料信息
+        </view>
+        <view class='lh90 fs30 pdl-30 bb-1 cf'  bindtap='checkType'>
+            <text class="text-theme">*</text> <text>物料品类:</text> <text class='pdl-10'> {{checkType}}</text> 
+            <text  class='iconfont icon-jiantou material-icon flr pdr-50'></text>
+           
+        </view>
+        <view class='material-number lh90 fs30 pdl-30 cf border-bottom'>
+            <text class="text-theme">*</text> <text>物料数量:</text>
+            <text class='sub' bindtap='sub'>-</text>
+            <input class='material-input' bindinput='findNumChange' bindblur='findNumBlur' type='number' value='{{findNum}}'></input>
+            <text class='plu' bindtap='plu'>+</text>
+            <text class='pdl-30'>件</text>
+        </view>
+
+          <view class="pd-30 flex align-start fs30">
+            <view class="width-200 word-spacing">
+                <text class="text-theme">*</text>描 述 ：</view>
+
+            <textarea class="flex-1 height-200 field-desc" name="field_desc" data-index='{{idx}}' bindinput='getDesc' value="{{desc}}" placeholder='(注：请详细描述物料的名称、用途、材质、交货时间)'>
+            </textarea>
+        </view>
+       
+    </view>
+
+     <!--收货地址  -->
+      <view class="fs30 box-shadow">
+          <view class="cell-padding fs30 lh90 border-bottom mgt-30">
+              取料地址
+              <input class="hidden" value="{{addressId}}" name="address_id"></input>
+          </view>
+          <view class="address flex flex-start pdt-30 pdb-30 pdl-20 pdr-20" >
+              <text class="iconfont icon-dizhi text-gray mgr-20"></text>
+              <text class='iconfont icon-jiantou address-icon'></text>
+              <view data-index='{{idx}}' bindtap='goConsigneeAddress' class="flex-1 address-info fs24">
+                  
+                  <view>
+                      <text class='remark' wx:if='{{defaultAddress.remark}}'>{{defaultAddress.remark||''}}</text> 
+                      {{defaultAddress.city_str|| ''}} {{defaultAddress.address|| ''}}
+                      
+                  </view>
+                  <view style='word-break:break-all;'>
+                      <text> {{defaultAddress.consignee|| ''}} / {{defaultAddress.mobile|| ''}}</text>
+                  </view>
+                  <view style='word-break:break-all;'>
+                      <text class='text-999'>{{defaultAddress.stall || ''}}</text>
+                  </view>
+              </view>
+
+              <view data-index='{{idx}}' bindtap='goConsigneeAddress'  
+              wx:if='{{!defaultAddress}}' class="text-666 h100 lh100 flex-1">
+                  点击添加取料地址
+              </view>
+          </view>
+      </view>
+      <view class='fs30 box-shadow'>
+          <view class='lh90 fs30 pdl-30 bb-1'>
+              配送费用
+          </view>
+          <view class='lh90 fs30 pdl-30'>
+              <text>共{{findNum}}件</text>
+              <text class='flr pdr-30'>￥{{filter.formatMoney(totalFecthPrice)}}</text>
+          </view>
+      </view>
+      <view class='join-find lh90 fs30 mgb-30' bindtap='fethchSubmit'>确认</view>
+      <view style='height:30rpx;'></view>
+</view>
+
+

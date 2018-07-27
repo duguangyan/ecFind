@@ -1,0 +1,154 @@
+/* pages/task/task.wxss */
+.task-find{
+  
+}
+.task-find-title{
+  line-height: 90rpx;
+  height: 90rpx;
+  border-bottom: 1rpx solid #f4f4f4; 
+  padding-left: 30rpx;
+}
+.task-find-list{
+  padding-left: 40rpx; 
+  border-bottom: 1rpx solid #f4f4f4;
+  padding: 30rpx 0; 
+}
+.check-box{
+  display: inline-block;
+  width: 55rpx;
+  padding-left: 30rpx;
+}
+.task-find-item{
+  display: inline-block;
+  width: 640rpx;
+  position: relative;
+  padding-left: 30rpx;
+}
+.task-find-item view{
+  display: block;
+
+  height: 50rpx;
+  line-height: 50rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.task-find-img{
+  width: 125rpx;
+  height: 125rpx;
+  position: absolute;
+  top: 0rpx;
+  right:20rpx;
+}
+.task-find-method{
+  position: relative;
+}
+.task-find-method-img{
+  padding-left: 30rpx;
+}
+.task-find-method-img image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 50rpx;
+  border-radius:10rpx; 
+}
+.task-find-price{
+  position: absolute;
+  bottom: 0rpx;
+  right: 20rpx;
+}
+.task-find-method-getfind view{
+  padding-left: 30rpx;
+  display: block;
+}
+.task-find-method-getfind{
+  padding-right: 30rpx;
+}
+.task-pay{
+  width: 680rpx;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  overflow: hidden;
+  background-color: #f8f8f8;
+}
+.task-pay view{
+  padding-left: 30rpx;
+}
+.task-pay-btn{
+  width: 200rpx;
+  height: 100%;
+  line-height: 120rpx;
+  display: inline-block;
+  background-color: #c81a29;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius:0; 
+}
+.task-pay-price{
+  
+}
+.task-find-sum{
+  text-align: right;
+  padding-right: 20rpx;
+  border-top: 1rpx solid #f4f4f4; 
+}
+.bottom-border{
+  border-bottom: 1rpx solid #f4f4f4; 
+}
+.task-pay{
+ 
+}
+.task-pay view{
+
+}
+.icon-dizhi{
+  font-size: 50rpx;
+  position: absolute;
+  top: 30%;
+  left: -60rpx;
+  z-index: 999999;
+}
+.task-sum{
+ position:absolute;
+right:220rpx;
+top:20rpx;
+width:550rpx;
+text-align:right;
+
+}
+.task-paybtn{
+  position: relative;
+  top: -15rpx;
+}
+.address-icon{
+  position: absolute;
+  right: 100rpx;
+  top: 36%;
+  
+  
+}
+.address{
+  position: relative;
+  padding-right: 150rpx;
+  padding-bottom: 30rpx;
+  left: 80rpx;
+}
+.icon-chahao{
+  position:absolute;
+  right:10rpx;
+  top:0rpx;
+  font-size:50rpx;
+  color:#aaa;
+}
+.remark {
+  display: inline;
+  text-align: center;
+  padding: 0 0 0 10rpx !important;
+}
+.task-warp{
+  overflow: hidden;
+}
